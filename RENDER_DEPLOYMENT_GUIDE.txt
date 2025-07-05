@@ -1,0 +1,142 @@
+# 🚀 Kvasir Dergi - Render.com Deployment Kılavuzu
+
+## 📋 ÖN GEREKSINIMLER
+✅ GitHub repository hazır: https://github.com/mgink/kvasir-dergi
+✅ Render.com hesabı (ücretsiz): https://render.com
+✅ Proje production için optimize edildi
+
+## 🎯 RENDER.COM'DA DEPLOYMENT ADIMLARı
+
+### 1. RENDER.COM'A GİRİŞ
+- https://render.com adresine gidin
+- "Sign Up" ile hesap oluşturun (GitHub ile bağlanabilirsiniz)
+- Dashboard'a erişin
+
+### 2. YENİ WEB SERVICE OLUŞTURMA
+- Dashboard'da "+ New" butonuna tıklayın
+- "Web Service" seçin
+- "Build and deploy from a Git repository" seçin
+- "Connect" butonuna tıklayın
+
+### 3. GITHUB REPOSITORY BAĞLAMA
+- GitHub hesabınızı bağlayın (izin verin)
+- Repository listesinde "kvasir-dergi" yi bulun
+- "Connect" butonuna tıklayın
+
+### 4. SERVICE KONFİGÜRASYONU
+Aşağıdaki ayarları yapın:
+
+**Basic Settings:**
+- Name: kvasir-dergi
+- Region: Oregon (US West) [veya size en yakın]
+- Branch: main
+- Root Directory: (boş bırakın)
+
+**Build & Deploy:**
+- Runtime: Node
+- Build Command: npm ci && npm run build
+- Start Command: npm start
+
+**Advanced Settings - Environment Variables:**
+NODE_ENV = production
+NEXT_TELEMETRY_DISABLED = 1
+
+**Instance Type:**
+- Free (0.5 GB RAM, 0.5 CPU) - Test için yeterli
+- Starter ($7/ay) - Production için önerilen
+
+### 5. DEPLOYMENT BAŞLATMA
+- "Create Web Service" butonuna tıklayın
+- İlk deployment otomatik başlayacak (5-10 dakika sürer)
+
+### 6. DEPLOYMENT DURUMU TAKİBİ
+Build log'larında şunları göreceksiniz:
+```
+==> Installing dependencies...
+==> Building Next.js application...
+==> Starting application...
+==> Your service is live at https://kvasir-dergi.onrender.com
+```
+
+## 🔧 DEPLOYMENT SONRASI AYARLAR
+
+### CUSTOM DOMAIN (İsteğe Bağlı)
+1. Service Settings'e gidin
+2. "Custom Domains" bölümünde kendi domain'inizi ekleyin
+3. DNS kayıtlarını güncellemeyi unutmayın
+
+### ENVIRONMENT VARIABLES (Gelecekte ihtiyaç halinde)
+- DATABASE_URL (PostgreSQL için)
+- NEXTAUTH_SECRET (Auth için)
+- EMAIL_SERVER_HOST (Email için)
+
+### AUTO-DEPLOY AYARI
+- Settings > "Auto-Deploy" açık olsun
+- GitHub'a her push'ta otomatik deploy olur
+
+## 🌐 BEKLENEN URL'LER
+- **Production URL**: https://kvasir-dergi.onrender.com
+- **Admin Panel**: https://kvasir-dergi.onrender.com/admin
+- **Store**: https://kvasir-dergi.onrender.com/store
+
+## 🚨 ÖNEMLİ NOTLAR
+
+### Free Tier Limitleri:
+- ⏰ 15 dakika inaktiviteden sonra sleep mode
+- 💾 500GB bandwidth/ay
+- 🕐 İlk erişimde 30-60 saniye açılış süresi (cold start)
+
+### Performance Tips:
+- Starter plan ($7/ay) ile 24/7 aktif kalır
+- Static dosyalar için CDN kullanımı önerilir
+- Database için PostgreSQL plugin eklenebilir
+
+### Troubleshooting:
+- Build failed ise: Dependencies eksik olabilir
+- Memory error ise: Starter plan'a geçin
+- 502 error ise: Start command'i kontrol edin
+
+## 📊 DEPLOYMENT SONRAGİ TEST LİSTESİ
+
+### ✅ Fonksiyonel Testler:
+- [ ] Ana sayfa yükleniyor
+- [ ] Mağaza sayfası çalışıyor
+- [ ] Admin panel erişilebilir (admin/admin123)
+- [ ] İletişim formu çalışıyor
+- [ ] Sepet sistemi aktif
+- [ ] Responsive tasarım mobilde düzgün
+
+### ✅ Performance Testler:
+- [ ] İlk yüklenme < 3 saniye
+- [ ] Sayfa geçişleri < 1 saniye
+- [ ] Images yükleniyor
+- [ ] JavaScript çalışıyor
+
+## 🔄 GELECEK GÜNCELLEMELER
+
+### Auto-Deploy Aktif:
+1. Kod değişikliği yapın
+2. GitHub'a push edin: `git push origin main`
+3. Render otomatik deploy edecek
+4. Build tamamlanınca site güncel olacak
+
+### Manual Deploy:
+- Render dashboard'da "Manual Deploy" > "Deploy latest commit"
+
+## 📞 DESTEK
+
+**Render.com Dokümanları**: https://render.com/docs
+**GitHub Repository**: https://github.com/mgink/kvasir-dergi
+**Test URL**: https://kvasir-dergi.onrender.com (deploy sonrası aktif olacak)
+
+---
+
+## 🎉 DEPLOYMENT TAMAMLANDI!
+
+Bu adımları takip ettikten sonra Kvasir Dergi siteniz https://kvasir-dergi.onrender.com adresinde canlı olacak!
+
+**Ortalama Deployment Süresi**: 5-10 dakika
+**Free Tier**: Test için mükemmel
+**Production**: Starter plan ($7/ay) önerilir
+
+İyi şanslar! 🚀

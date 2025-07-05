@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'standalone',
+  // output: 'standalone', // Render.com için devre dışı
   poweredByHeader: false,
   generateEtags: false,
   compress: true,
