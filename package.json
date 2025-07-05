@@ -9,11 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/[USERNAME]/kvasir-dergi.git"
+    "url": "https://github.com/mgink/kvasir-dergi.git"
   },
-  "homepage": "https://github.com/[USERNAME]/kvasir-dergi#readme",
+  "homepage": "https://github.com/mgink/kvasir-dergi#readme",
   "bugs": {
-    "url": "https://github.com/[USERNAME]/kvasir-dergi/issues"
+    "url": "https://github.com/mgink/kvasir-dergi/issues"
   },
   "keywords": [
     "nextjs",
