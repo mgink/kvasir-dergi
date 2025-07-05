@@ -2,50 +2,8 @@
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.3.4-black)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-19.0+-blue)](https:/## 📞 **İletişim & Destek**
-
-- 🌐 **Demo**: [http://localhost:3000](http://localhost:3000)
-- 📧 **Email**: info@kvasirdergi.com
-- 🐛 **Issues**: [GitHub Issues](https://github.com/mgink/kvasir-dergi/issues)
-- 📖 **Docs**: [Detaylı Dokümantasyon](docs/)
-
-## 🚀 **Render.com Deployment**
-
-### Hızlı Deploy
-1. **Render.com**'da hesap oluşturun
-2. **"New Web Service"** seçin
-3. GitHub repository'sini bağlayın: `https://github.com/mgink/kvasir-dergi`
-4. Aşağıdaki ayarları yapın:
-
-```yaml
-Build Command: npm install && npm run build
-Start Command: npm start
-Node Version: 18.x
-```
-
-### Environment Variables
-Render.com dashboard'unda şu değişkenleri ekleyin:
-```
-NODE_ENV=production
-NEXT_TELEMETRY_DISABLED=1
-NEXT_PUBLIC_SITE_URL=https://your-app-name.onrender.com
-```
-
-### Auto-Deploy
-- ✅ **render.yaml** dahil (otomatik konfigürasyon)
-- ✅ **Production optimized** Next.js config
-- ✅ **Health check** endpoints
-- ✅ **Environment** variables template
-
----
-
-<div align="center">
-
-**🎉 Kvasir Dergi ile modern e-ticaret deneyimi! 🎉**
-
-[⭐ Star](https://github.com/mgink/kvasir-dergi) | [🍴 Fork](https://github.com/mgink/kvasir-dergi/fork) | [🐛 Report Bug](https://github.com/mgink/kvasir-dergi/issues) | [💡 Request Feature](https://github.com/mgink/kvasir-dergi/issues)
-
-</div>![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.7-purple)](https://getbootstrap.com/)
+[![React](https://img.shields.io/badge/React-19.0+-blue)](https://reactjs.org/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.7-purple)](https://getbootstrap.com/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 Modern, responsive ve kullanıcı dostu bir dergi e-ticaret platformu. Next.js 15 ve TypeScript ile geliştirilmiş, tam özellikli bir online mağaza ve yönetim sistemi.
