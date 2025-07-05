@@ -1,10 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // output: 'standalone', // Render.com için devre dışı
+  // Render.com için optimize ayarlar
   poweredByHeader: false,
   generateEtags: false,
   compress: true,
+  
+  // Render.com için gerekli ayarlar
+  env: {
+    HOSTNAME: '0.0.0.0',
+    PORT: process.env.PORT || '10000',
+  },
+  
   experimental: {
     optimizeCss: true,
   },

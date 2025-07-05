@@ -96,6 +96,40 @@ Build log'larında şunları göreceksiniz:
 - Memory error ise: Starter plan'a geçin
 - 502 error ise: Start command'i kontrol edin
 
+## 🚨 502 BAD GATEWAY DETAYLI ÇÖZÜM
+
+### ADIM 1: Environment Variables Kontrol
+Render.com Dashboard > Settings > Environment Variables:
+- NODE_ENV = production
+- PORT = 10000
+- NEXT_TELEMETRY_DISABLED = 1
+
+### ADIM 2: Build & Deploy Settings Kontrol
+- Build Command: npm install && npm run build
+- Start Command: npm start
+
+### ADIM 3: Debug Logs Kontrol
+Deploy logs'ta şunları arayın:
+✅ "npm install" başarılı mı?
+✅ "npm run build" başarılı mı?
+✅ "npm start" çalışıyor mu?
+✅ "ready - started server on 0.0.0.0:10000" mesajı var mı?
+
+### ADIM 4: Manuel Müdahale
+Eğer hala çalışmıyorsa:
+1. Render.com'da "Manual Deploy" yapın
+2. Logs sekmesinde gerçek zamanlı logları izleyin
+3. Build sırasında hata var mı kontrol edin
+
+### ADIM 5: Alternative Start Command
+Eğer npm start çalışmıyorsa, Render.com'da Start Command'i şöyle değiştirin:
+- `./node_modules/.bin/next start -H 0.0.0.0 -p $PORT`
+
+### ADIM 6: Node.js Version Kontrol
+Render.com'da Node.js 18+ kullandığınızdan emin olun:
+- Dashboard > Settings > Environment Variables
+- NODE_VERSION = 18 (eğer yoksa ekleyin)
+
 ## 📊 DEPLOYMENT SONRAGİ TEST LİSTESİ
 
 ### ✅ Fonksiyonel Testler:
