@@ -1,7 +1,36 @@
 {
-  "name": "kvdergi",
-  "version": "0.1.0",
-  "private": true,
+  "name": "kvasir-dergi",
+  "version": "1.0.0",
+  "description": "Modern, responsive dergi e-ticaret platformu - Next.js 15 ve TypeScript ile geliştirilmiş tam özellikli online mağaza ve yönetim sistemi",
+  "private": false,
+  "author": {
+    "name": "Kvasir Dergi",
+    "email": "info@kvasirdergi.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/[USERNAME]/kvasir-dergi.git"
+  },
+  "homepage": "https://github.com/[USERNAME]/kvasir-dergi#readme",
+  "bugs": {
+    "url": "https://github.com/[USERNAME]/kvasir-dergi/issues"
+  },
+  "keywords": [
+    "nextjs",
+    "typescript",
+    "ecommerce",
+    "magazine",
+    "react",
+    "bootstrap",
+    "tailwindcss",
+    "admin-panel",
+    "email-service",
+    "responsive",
+    "modern-ui",
+    "shopping-cart",
+    "download-system"
+  ],
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
